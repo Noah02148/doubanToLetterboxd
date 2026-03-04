@@ -609,8 +609,6 @@
       .then(data => {
         document.getElementById('stat-users').textContent = formatNumber(data.users);
         document.getElementById('stat-movies').textContent = formatNumber(data.movies);
-        document.getElementById('goal-count').textContent = data.users;
-        document.getElementById('goal-bar').style.width = Math.min(data.users, 100) + '%';
       })
       .catch(() => {
         document.getElementById('stat-users').textContent = '0';
